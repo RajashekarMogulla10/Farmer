@@ -1,0 +1,109 @@
+# Navigate to backend directory
+cd ~/Pictures/FarmerAgroApp/backend
+
+# Remove any existing node_modules and package-lock.json (optional, for clean install)
+rm -rf node_modules package-lock.json
+
+# Install backend dependencies with npm
+npm install
+
+# Start the backend server
+npm start
+
+
+# Navigate to frontend directory (in a new terminal)
+cd ~/Pictures/FarmerAgroApp/frontend
+
+# Remove any existing node_modules and package-lock.json (optional, for clean install)
+rm -rf node_modules package-lock.json
+
+# Install frontend dependencies with Yarn
+yarn install
+
+# Start the frontend development server
+yarn start
+
+
+
+Output: The browser should automatically open http://localhost:3000. If not, manually visit that URL.
+    Note: Keep this terminal running. The app should now be accessible.
+
+Step 4: Verify Everything Works
+
+    Backend Check:
+        In a browser or tool like Postman, visit http://localhost:5000/api/users/queries.
+        Expected: An empty array [] or existing queries if data exists (assuming GET request works).
+    Frontend Check:
+        Open http://localhost:3000 in your browser.
+        Test the flow:
+            Login: Sign up/login as a farmer or scientist.
+            Farmer Dashboard: Post a query with an image.
+            Scientist Dashboard: Respond to the query with text and an image.
+            Verify the UI looks styled (e.g., green buttons for farmers, blue for scientists).
+    Audit Check (optional):
+    bash
+
+    cd ~/Pictures/FarmerAgroApp/frontend
+    yarn audit
+        Expected: No high/moderate vulnerabilities for nth-check or postcss.
+
+Full Command Sequence (Copy-Paste Friendly)
+
+Run these in separate terminals:
+
+Terminal 1 (MongoDB):
+bash
+mongod
+
+Terminal 2 (Backend):
+bash
+cd ~/Pictures/FarmerAgroApp/backend
+rm -rf node_modules package-lock.json
+npm install
+npm start
+
+Terminal 3 (Frontend):
+bash
+cd ~/Pictures/FarmerAgroApp/frontend
+rm -rf node_modules package-lock.json
+yarn install
+yarn start
+Running in Background (Optional)
+
+If you want to run everything in the background:
+
+    MongoDB:
+    bash
+
+mongod --fork --logpath ~/mongodb.log
+Backend:
+bash
+cd ~/Pictures/FarmerAgroApp/backend
+npm install && npm start &
+Frontend:
+bash
+
+    cd ~/Pictures/FarmerAgroApp/frontend
+    yarn install && yarn start &
+
+    Note: Use jobs to check background processes and fg to bring them to the foreground if needed.
+
+Stopping the Application
+
+To stop everything:
+
+    Frontend: Ctrl+C in the frontend terminal (or kill the process if in background).
+    Backend: Ctrl+C in the backend terminal (or kill the process).
+    MongoDB: Ctrl+C in the MongoDB terminal or:
+    bash
+
+    mongo --eval "db.getSiblingDB('admin').shutdownServer()"
+
+Troubleshooting
+
+    MongoDB Not Running: If backend shows "MongoDB connection error," ensure mongod is active.
+    Port Conflict: If 5000 (backend) or 3000 (frontend) is in use, edit .env files to change ports (e.g., PORT=5001, REACT_APP_API_URL=http://localhost:5001).
+    Frontend Errors: If yarn start fails, verify public/index.html and src/index.js exist as provided.
+    Vulnerabilities: If yarn audit shows issues, share the output.
+
+Let me know if you encounter any issues while running these commands or if you need help with testing the app!

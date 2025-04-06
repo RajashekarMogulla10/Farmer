@@ -1,0 +1,230 @@
+.scientist-dashboard {
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logout-btn {
+  padding: 12px 25px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.queries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.query-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.query-text {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.file-gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.file-item {
+  max-width: 120px;
+}
+
+.file-item img, .file-item video, .file-item audio {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-item a {
+  color: #3498db;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.file-item a:hover {
+  text-decoration: underline;
+}
+
+.farmer-info {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  color: #7f8c8d;
+  margin-top: 15px;
+}
+
+.farmer-info span {
+  color: #2980b9;
+  font-weight: 600;
+}
+
+.farmer-info a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.farmer-info a:hover {
+  text-decoration: underline;
+}
+
+.response-form, .edit-response-form {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px dashed #ddd;
+}
+
+.response-form textarea, .edit-response-form textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.response-form input[type="file"], .edit-response-form input[type="file"] {
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.respond-btn {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.respond-btn:hover {
+  background-color: #2980b9;
+}
+
+.response {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px dashed #ddd;
+}
+
+.response-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.notification {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8d7da;
+  border-radius: 6px;
+  color: #721c24;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.response-actions, .edit-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  padding: 8px 20px;
+  background-color: #f1c40f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #d4ac0d;
+}
+
+.delete-btn {
+  padding: 8px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.update-btn {
+  padding: 8px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.update-btn:hover {
+  background-color: #2980b9;
+}
+
+.cancel-btn {
+  padding: 8px 20px;
+  background-color: #7f8c8d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #6c757d;
+}

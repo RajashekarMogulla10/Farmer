@@ -1,0 +1,243 @@
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('farmer4.jpg'); /* Correct: Absolute path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.background > * {
+  position: relative;
+  z-index: 1;
+}
+
+.registered-users-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #f1c40f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.registered-users-btn:hover {
+  background-color: #d4ac0d;
+}
+
+.login-container {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-image: url('farmer.jpg'); /* Correct: Absolute path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.login-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.role-buttons {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.farmer-btn, .scientist-btn {
+  padding: 12px 25px;
+  margin: 0 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.farmer-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.farmer-btn:hover {
+  background-color: #219653;
+}
+
+.scientist-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.scientist-btn:hover {
+  background-color: #2980b9;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #219653;
+}
+
+.switch-btn {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.switch-btn:hover {
+  color: #2980b9;
+}
+
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.users-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.users-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.close-btn:hover {
+  color: #c0392b;
+}
+
+.radio-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.radio-buttons label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.users-table th, .users-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #f1c40f;
+  color: white;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.users-table tr:hover {
+  background-color: #f1f1f1;
+}

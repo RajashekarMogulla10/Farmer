@@ -1,0 +1,47 @@
+Step-by-Step Setup Instructions:
+
+    Prerequisites:
+
+    Install Node.js and MongoDB
+    Create project folder: mkdir FarmerAgroApp
+
+    Backend Setup:
+
+    Create backend folder and files as shown
+    Run npm init -y in backend folder
+    Install dependencies: npm install express mongoose cors multer
+    Create 'uploads' folder in backend
+    Start MongoDB locally
+    Run node server.js
+
+    Frontend Setup:
+
+    Create frontend folder structure
+    Run npx create-react-app frontend
+    Replace src folder contents with provided code
+    Install additional dependencies: npm install axios react-router-dom
+    Run npm start
+
+    Usage:
+
+    Open browser to http://localhost:3000
+    Choose to sign up/login as Farmer or Agro-Scientist
+    Farmers: Post queries and upload images
+    Scientists: View and respond to farmer queries
+
+This implementation includes:
+
+    User authentication with role-based access
+    Image upload capability
+    Query posting and response system
+    Separate dashboards for farmers and scientists
+    Basic profile information display
+
+Note: This is a basic version. For production, you'd need to add:
+Password hashing
+Input validation
+Error handling
+Better UI/UX
+Authentication tokens
+Environment variables
+Database connection security
